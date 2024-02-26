@@ -1,0 +1,26 @@
+.button {
+  display: flex;
+  justify-content: bottom;
+
+  padding: 10px;
+  border: black solid 1px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+}
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: scale(1.1);
+}
+.details {
+  margin-top: 50px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+}
+.image:hover {
+  transform: scale(1.3);
+}
+.image {
+  max-height: 500px;
+}

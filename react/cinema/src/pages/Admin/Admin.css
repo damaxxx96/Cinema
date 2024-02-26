@@ -1,0 +1,46 @@
+.admin {
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+  margin-top: 30px;
+}
+.create {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  color: white;
+  gap: 10px;
+  margin-top: 30px;
+}
+.delete {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  color: white;
+  gap: 10px;
+  margin-top: 30px;
+}
+.deletebutton {
+  margin-top: 148px;
+}
+.repertoires {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  color: white;
+  gap: 10px;
+  margin-top: 30px;
+}
+.movies {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  color: white;
+  gap: 10px;
+  margin-top: 30px;
+}
