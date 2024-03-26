@@ -10,7 +10,9 @@ interface LoginProps {
 const Login = ({ user, setUser }: LoginProps) => {
   const navigate = useNavigate();
 
-  const tryLogin = async () => {
+  const tryLogin = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
     try {
       const username = (document.getElementById("username") as HTMLInputElement)
         .value;
@@ -24,7 +26,7 @@ const Login = ({ user, setUser }: LoginProps) => {
 
       if (response.status === 200) {
         setUser(username);
-        navigate("/");
+        navigate("/admin");
       }
     } catch (error) {
       // Handle error
@@ -34,12 +36,12 @@ const Login = ({ user, setUser }: LoginProps) => {
 
   return (
     <div className="login">
-      <form className="form">
+      <form className="form" onSubmit={tryLogin}>
         <label>Username:</label>
         <input name="username" type="text" id="username" />
         <label>Password:</label>
         <input name="password" type="password" id="password" />
-        <button type="button" className="submitbutton" onClick={tryLogin}>
+        <button type="submit" className="submitbutton">
           Submit
         </button>
       </form>

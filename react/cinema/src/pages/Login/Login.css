@@ -12,6 +12,7 @@
   padding: 20px;
   color: white;
   gap: 10px;
+  width: 100%;
 }
 .submitbutton {
   margin-top: 40px;

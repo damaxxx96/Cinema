@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Admin.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const Admin: React.FC = () => {
+  const navigate = useNavigate();
+
   const [allRepertoires, setAllRepertoires] = useState<any[]>([]);
   const [allMovies, setAllMovies] = useState<any[]>([]);
 
@@ -182,13 +185,13 @@ const Admin: React.FC = () => {
             value={movieId}
             onChange={(e) => setMovieId(e.target.value)}
           />
-          <label>Venue ID:</label>
+          <label>Venue ID (1, 2, 3):</label>
           <input
             type="text"
             value={venueId}
             onChange={(e) => setVenueId(e.target.value)}
           />
-          <label>Showtime:</label>
+          <label>Showtime (YYYY-MM-DD HH:MM:SS):</label>
           <input
             type="text"
             value={showtime}
@@ -205,7 +208,7 @@ const Admin: React.FC = () => {
             onChange={(e) => setRepertoireId(e.target.value)}
           />
           <button className="deletebutton" type="submit">
-            DeleteRepertoire
+            Delete Repertoire
           </button>
         </form>
       </div>
@@ -268,6 +271,11 @@ const Admin: React.FC = () => {
             Delete Movie
           </button>
         </form>
+      </div>
+      <div className="admin">
+        <button onClick={() => navigate("/")} className="button">
+          Go back
+        </button>
       </div>
     </div>
   );

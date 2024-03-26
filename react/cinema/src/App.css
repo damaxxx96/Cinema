@@ -1,4 +1,4 @@
 .app {
   background-image: url("assets/background.jpg");
-  height: 100vh;
+  min-height: 100vh; 
 }

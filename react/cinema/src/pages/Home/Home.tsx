@@ -14,15 +14,15 @@ const Home = ({ user }: HomeProps) => {
       <div className="loginwrapper">
         {user === "" ? (
           <Link to="/login">
-            <button className="buttonlogin">Login</button>
+            <button className="button">Login</button>
           </Link>
         ) : (
           user && (
             <>
               <Link to="/admin">
-                <button className="buttonadmin">Admin</button>
+                <button className="button">Admin</button>
               </Link>
-              <span> {user}</span>
+              <span>{user}</span>
             </>
           )
         )}
