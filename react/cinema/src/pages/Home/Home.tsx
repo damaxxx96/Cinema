@@ -22,7 +22,6 @@ const Home = ({ user }: HomeProps) => {
               <Link to="/admin">
                 <button className="button">Admin</button>
               </Link>
-              <span>{user}</span>
             </>
           )
         )}
